@@ -1,0 +1,16 @@
+[package]
+name = "rlsof"
+version = "0.1.0"
+authors = ["Jesse Jaggars <jhjaggars@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+phf = { version = "0.8", features = ["macros"] }
+
+[lib]
+name = "rlsof"
+crate-type = ["dylib"]
+
+[dependencies.cpython]
+version = "0.5"
+features = ["extension-module"]
