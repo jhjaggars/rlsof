@@ -2,15 +2,14 @@
 name = "rlsof"
 version = "0.1.0"
 authors = ["Jesse Jaggars <jhjaggars@gmail.com>"]
-edition = "2018"
 
 [dependencies]
 phf = { version = "0.8", features = ["macros"] }
 
 [lib]
 name = "rlsof"
-crate-type = ["dylib"]
+path = "src/lib.rs"
 
-[dependencies.cpython]
-version = "0.5"
-features = ["extension-module"]
+[[bin]]
+name = "rlsof"
+path = "src/bin/main.rs"
