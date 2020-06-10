@@ -3,13 +3,15 @@ name = "rlsof"
 version = "0.1.0"
 authors = ["Jesse Jaggars <jhjaggars@gmail.com>"]
 
-[dependencies]
-phf = { version = "0.8", features = ["macros"] }
-
 [lib]
 name = "rlsof"
 path = "src/lib.rs"
+crate-type = ["cdylib"]
 
-[[bin]]
-name = "rlsof"
-path = "src/bin/main.rs"
+[dependencies.pyo3]
+version = "0.10.1"
+features = ["extension-module"]
+
+[dependencies.phf]
+version = "0.8"
+features = ["macros"]
